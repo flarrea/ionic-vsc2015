@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<body ng-app="photosApp">
+
+
+    <ion-nav-bar class="bar-positive">
+
+      <ion-nav-back-button>
+
+      </ion-nav-back-button>
+  </ion-nav-bar>
+
+
+    <ion-nav-view>
+</ion-nav-view>
+
+</body>
