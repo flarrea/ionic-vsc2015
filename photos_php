@@ -1,0 +1,46 @@
+<?php
+header('content-type: application/json; charset=utf-8');
+header("access-control-allow-origin: *");
+
+$data = array
+ (
+ array(
+	"id" => 0,
+	"name" => "",
+	"url" => ""),
+ array(
+    "id" => 1,
+	"name" => "",
+	"url" => ""),
+ array(
+    "id" => 2,
+	"name" => "",
+	"url" => ""),
+ array(
+    "id" => 3,
+	"name" => "",
+	"url" => "g"),
+ array(
+    "id" => 4,
+	"name" => "",
+	"url" => ""),
+ array(
+    "id" => 5,
+	"name" => "",
+	"url" => ""),
+ array(
+    "id" => 6,
+	"name" => "",
+	"url" => ""),
+ array(
+    "id" => 7,
+	"name" => "",
+	"url" => "")
+ );
+
+$json = json_encode($data);
+
+echo isset($_GET['callback'])
+    ? "{$_GET['callback']}($json)"
+    : $json;
+?>
