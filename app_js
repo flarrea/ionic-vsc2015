@@ -1,0 +1,22 @@
+angular.module('photosApp', ['ionic','photosApp.controllers'])
+
+.config(function($stateProvider, $urlRouterProvider) {
+
+            $stateProvider
+
+               .state('photos', {
+
+                    url: '/photos',
+
+                    templateUrl: 'templates/photos.html',
+
+                    controller: 'PhotosController'
+
+
+               });
+
+
+
+            $urlRouterProvider.otherwise('/photos');
+ 
+       });
