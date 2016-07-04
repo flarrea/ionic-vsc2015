@@ -1,0 +1,36 @@
+angular.module('photosApp.controllers', [])
+
+
+
+.service('imageService', function ($http) {
+
+
+    
+        var url = $http.get('http://.../photos.php', { responseType: 'json' });
+  
+        
+		return {
+
+			getImages: function () {
+
+				return url;
+
+			}
+
+		};
+
+	})
+
+.controller('PhotosController', function($scope, imageService) {
+
+    
+    imageService.getImages().success(function (result) {
+
+			$scope.images = result;
+
+           console.log('OK', result)
+
+		});
+
+    
+});
